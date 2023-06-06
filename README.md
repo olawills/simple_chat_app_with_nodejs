@@ -6,5 +6,5 @@
 
 ## App Screeshot
 <center>
-<img src = "screenshot/1.png" alt="Williams" style="width:35%">
+<img src = "screenshot/1.png" alt="Williams" style="width:50%">
 </center>
