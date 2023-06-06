@@ -64,6 +64,7 @@ class _ChatScreenState extends State<ChatScreen> {
     super.dispose();
   }
 
+// http://192.168.43.188:4000
   void connect() {
     socket = IO.io(
         'http://localhost:4000',
