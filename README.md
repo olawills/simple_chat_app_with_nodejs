@@ -4,7 +4,7 @@
 
 ### The Backend can be found at <a href = "https://github.com/olawills/chatting_api_with_sockets" target=”_blank”>Link to Backend</a>
 
-## App Screeshot
+## App Screenshot
 <center>
-<img src = "screenshot/1.png" alt="Williams">
+<img src = "screenshot/correct_1.png" alt="Williams">
 </center>

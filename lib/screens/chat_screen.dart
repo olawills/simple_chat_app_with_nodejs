@@ -7,6 +7,7 @@ import 'package:chat_app/provider/chat_provider.dart';
 import 'package:chat_app/widgets/message_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import 'package:socket_io_client/socket_io_client.dart' as IO;
 
 class ChatScreen extends StatefulWidget {
@@ -112,6 +113,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         );
                       }
                       var currentItem = chatController.chatMessages[index];
+
                       return MessageItem(
                         sentByMe: currentItem.sentByMe == socket.id,
                         message: currentItem.message,
@@ -162,10 +164,11 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 
   void sendmessage(String text) {
+    DateTime now = DateTime.now();
     var message = {
       "message": text,
       "sentByMe": socket.id,
-      "time": DateTime.now().toString().substring(10, 10)
+      "time": DateFormat('kk:mm').format(now),
     };
     socket.emit('message', message);
     chatController.chatMessages.add(ChatMessage.fromJson(message));

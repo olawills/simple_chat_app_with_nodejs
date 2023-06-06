@@ -38,7 +38,9 @@ class MessageItem extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 5),
-              Text(time, style: const TextStyle(color: Colors.white)),
+              Text(time,
+                  style: TextStyle(
+                      color: sentByMe ? Colors.white : Colors.black87)),
             ],
           ),
         ),
